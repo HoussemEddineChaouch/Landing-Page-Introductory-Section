@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Violet: hsl(257, 40%, 49%) ;
+    --Soft-Magenta : hsl(300, 69%, 71%) ;
+    --font-family--open: 'Open Sans', sans-serif;
+    --font-family-poppins: 'Poppins', sans-serif;
+}
+body {
+    font-family: var(--font-family--open);
+    background-color: var(--Violet);
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.container {
+    margin: auto;
+    padding-left: 15px ;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.intro-section {
+    padding: 50px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+header {
+    width: 200px;
+  
+}
+header img {
+    max-width: 100%;
+}
+section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+section picture img {
+    width: 600px;
+}
+section article h2 {
+    color: white;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: var(--font-family-poppins);
+    font-weight: 600;
+}
+section article p {
+    color: white;
+    line-height: 1.6;
+    font-weight: 400;
+}
+@media ( max-width : 991px ) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer {
+        position: relative;
+        left: -50%;
+        transform: translateX(50%);
+    }
+    article {
+        text-align: center;
+    }
+    section article h2 {
+        margin-top: 0px;
+    }
+    section article p {
+        max-width: 650px;
+    }
+}
+@media ( max-width : 768px ) {
+    section picture img {
+     width: 350px;
+   }
+   section article h2 {
+    font-size: 25px;
+  }
+   section article p {
+     font-size: 14px;
+    }
+}
+section article button {
+    margin-top: 20px;
+    padding: 10px 60px;
+    border: none;
+    border-radius: 25px;
+    color: var(--Violet);
+    font-size: 15px;
+    box-shadow: 4px 4px 9px hsl(257, 44%, 34%);
+    cursor: pointer;
+    transition: 0.4s;
+}
+section article button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+.footer {
+    align-self: end;
+}
+.footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.footer ul li {
+   height: 36px;
+   width: 36px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid white;
+   border-radius: 50%;
+   transition: 0.3s;
+   cursor: pointer;
+   
+}
+.footer ul li:hover {
+    border-color:var(--Soft-Magenta) ;
+}
+.footer ul li:hover i {
+    color: var(--Soft-Magenta)  ;
+}
+.footer ul li:not(:last-child) {
+    margin-right: 15px;
+}
+.footer ul li i {
+    color: white;
+}
